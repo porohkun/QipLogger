@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QipLogger", "QipLogger\QipL
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WPF.MyFlatTheme", "WPF.MyFlatTheme\WPF.MyFlatTheme.shproj", "{5F01B0C2-39D0-4388-A06A-F595EB7011B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IridiumTest", "IridiumTest\IridiumTest.csproj", "{CE483E63-BA13-42F3-9EF5-617C2D94E2C7}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		WPF.MyFlatTheme\WPF.MyFlatTheme.projitems*{5f01b0c2-39d0-4388-a06a-f595eb7011b4}*SharedItemsImports = 13
@@ -21,6 +23,10 @@ Global
 		{78A3EC10-4E34-41A2-A84D-683AF52E1E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78A3EC10-4E34-41A2-A84D-683AF52E1E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78A3EC10-4E34-41A2-A84D-683AF52E1E8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE483E63-BA13-42F3-9EF5-617C2D94E2C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE483E63-BA13-42F3-9EF5-617C2D94E2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE483E63-BA13-42F3-9EF5-617C2D94E2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE483E63-BA13-42F3-9EF5-617C2D94E2C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

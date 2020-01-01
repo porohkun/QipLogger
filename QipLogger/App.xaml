@@ -2,8 +2,18 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:QipLogger"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Windows/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Colors/DarkColors.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Controls/BaseButton.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Controls/BaseTextBlock.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Controls/BaseToggleButton.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Controls/BaseWindow.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <local:DBModel x:Key="DbModel"/>
+            <local:DBModelDesign x:Key="DBModelDesign"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

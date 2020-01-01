@@ -1,0 +1,50 @@
+﻿<Window x:Class="QipLogger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QipLogger"
+        mc:Ignorable="d" Loaded="Window_Loaded" Style="{StaticResource NormalWindowStyle}"
+        Width="{Binding Source={x:Static local:Settings.Instance}, Path=MainWindow.Width, Mode=TwoWay}" MinWidth="780"
+        Height="{Binding Source={x:Static local:Settings.Instance}, Path=MainWindow.Height, Mode=TwoWay}" MinHeight="400"
+        WindowState="{Binding Source={x:Static local:Settings.Instance}, Path=MainWindow.State, Mode=TwoWay}"
+        DataContext="{StaticResource DbModel}" d:DataContext="{StaticResource DBModelDesign}"
+        >
+    <DockPanel>
+        <DockPanel Width="200" DockPanel.Dock="Left">
+            <TextBlock Text="Database" DockPanel.Dock="Top" Margin="3"/>
+            <TextBox DockPanel.Dock="Top" Margin="2"/>
+            <DockPanel DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="2">
+                <Button Content="New DB" DockPanel.Dock="Left" Margin="2"/>
+                <Button Content="Load" DockPanel.Dock="Left" Margin="2"/>
+                <Button Content="Import files to DB" IsEnabled="{Binding DBLoaded}" DockPanel.Dock="Left" Margin="2"/>
+            </DockPanel>
+            <TextBox DockPanel.Dock="Top" Margin="2" VerticalScrollBarVisibility="Visible"/>
+        </DockPanel>
+
+        <DockPanel Width="200" DockPanel.Dock="Left">
+            <TextBlock Text="Select user or users with Ctrl" DockPanel.Dock="Top" Margin="3"/>
+            <ListView ItemsSource="{Binding Users}" DockPanel.Dock="Top" Margin="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock DockPanel.Dock="Left" Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </DockPanel>
+
+        <DockPanel Width="200" DockPanel.Dock="Left">
+            <TextBlock Text="Select dialogue" DockPanel.Dock="Top" Margin="3"/>
+            <ListBox DockPanel.Dock="Top" Margin="2"/>
+        </DockPanel>
+
+        <DockPanel DockPanel.Dock="Left">
+            <DockPanel DockPanel.Dock="Top" LastChildFill="True">
+                <Button Width="20" Content="&lt;" DockPanel.Dock="Left" Margin="2"/>
+                <Button Width="20" Content="&gt;" DockPanel.Dock="Right" Margin="2"/>
+                <TextBlock Text="dfsdfs" HorizontalAlignment="Center" Margin="2"/>
+            </DockPanel>
+            <ListBox DockPanel.Dock="Top" Margin="2"/>
+        </DockPanel>
+    </DockPanel>
+</Window>
